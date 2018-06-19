@@ -1,3 +1,31 @@
-<p>
-  nav-bar works!
-</p>
+<header class="header__page">
+  <div class="header__logoBox">
+    <h1 class="logoBox__company">belle & carrie</h1>
+    <h2 class="logoBox__desc">rehabilitation yoga</h2>
+  </div>
+  <nav class="header__navBar">
+    <button class="navBar__btn">open</button>
+    <ul class="navBar__list">
+      <li>
+        <a routerLink="/home" routerLinkActive="activeLink">home</a>
+      </li>
+      <li>
+        <a routerLink="/about" routerLinkActive="activeLink">about</a>
+      </li>
+      <li>
+        <a routerLink="/classes" routerLinkActive="activeLink">classes</a>
+        <ul class="navbar__subList">
+          <li>
+            <a routerLink="/about" routerLinkActive="instructors">instructors</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a routerLink="/contact" routerLinkActive="activeLink">contact</a>
+      </li>
+      <li>
+        <a routerLink="/blog" routerLinkActive="activeLink">blog</a>
+      </li>
+    </ul>
+  </nav>
+</header>

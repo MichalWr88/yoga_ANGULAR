@@ -1,0 +1,10 @@
+@import './variables';
+@import './modernize';
+
+html { font-size: 62.5%; } 
+body{
+  background-color: $c-primary;
+  padding:0 10px;
+  font-size:1.4rem;
+  color:$c-font1;
+}

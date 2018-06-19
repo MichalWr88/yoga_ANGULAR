@@ -1,0 +1,75 @@
+@import '~sass/variables';
+
+$lhB: 5rem;
+.header__page {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  // justify-content: center;
+  align-items: center;
+}
+.header__logoBox {
+  display: inline;
+}
+.logoBox__company {
+  font-size: 5rem;
+  line-height: $lhB;
+  color: $c-font2;
+  text-transform: capitalize;
+}
+.logoBox__desc {
+  font-size: 2.6rem;
+  line-height: $lhB;
+  text-transform: uppercase;
+}
+/* navbar */
+
+.header__navBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 30px;
+  padding-bottom: 10px;
+}
+.navBar__btn {
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+}
+.navBar__list {
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+  list-style-type: none;
+  & > li {
+    padding: 10px;
+    position: relative;
+    font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: $c-font1;
+    &:hover > a:first-of-type {
+      color: red;
+    }
+  }
+}
+.navbar__subList > li {
+  position: absolute;
+  padding: 0;
+  list-style-type: none;
+  top: 50px;
+  left: 0;
+}
+.activeLink {
+  color: $c-font2;
+}
