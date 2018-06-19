@@ -12,6 +12,7 @@ import { SharedModule } from './shared/shared.module';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { routerModule } from './app.routing';
 import { AboutModule } from './components/about/about.module';
+import { MainComponent } from './components/main/main.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AboutModule } from './components/about/about.module';
     InstructorsComponent,
     ContactComponent,
     BlogComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    MainComponent
   ],
   imports: [BrowserModule, SharedModule, routerModule, AboutModule],
   providers: [],

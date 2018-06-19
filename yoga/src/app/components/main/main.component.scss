@@ -1,0 +1,9 @@
+@import '~sass/styles.scss';
+.container {
+  background-color: $c-white;
+  min-height: 830px;
+  padding: 40px;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
