@@ -1,4 +1,4 @@
-@import '~sass/styles.scss';
+@import '~sass/_variables.scss';
 .container {
   background-color: $c-white;
   min-height: 830px;
@@ -6,4 +6,5 @@
   display: flex;
   flex-wrap:wrap;
   justify-content: center;
+ 
 }

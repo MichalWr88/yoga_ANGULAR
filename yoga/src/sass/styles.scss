@@ -1,8 +1,12 @@
 @import './variables';
 @import './modernize';
+@import "./mixins";
+
+@include font-face(lato, "../assets/fonts/lato-regular-webfont");
 
 html { font-size: 62.5%; } 
 body{
+  font-family: lato-regular-webfont;
   background-color: $c-primary;
   padding:0 10px;
   font-size:1.4rem;
