@@ -1,12 +1,14 @@
 @import './variables';
-@import './modernize';
+@import './normalize';
 @import "./mixins";
 
-@include font-face(lato, "../assets/fonts/lato-regular-webfont");
+@include font-face(lato, "../assets/fonts/lato-regular-webfont", normal,normal);
+@include font-face(nixieone, "../assets/fonts/nixieone-regular-webfont", normal,normal);
 
 html { font-size: 62.5%; } 
 body{
-  font-family: lato-regular-webfont;
+  font-family: lato;
+  font-weight: 400;
   background-color: $c-primary;
   padding:0 10px;
   font-size:1.4rem;

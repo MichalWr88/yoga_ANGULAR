@@ -1,0 +1,34 @@
+@import "~sass/variables";
+.wrapper{
+  max-width:540px;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding:10px 0;
+}
+.text{
+  font-size: 10rem;
+  color:$c-font3;
+  line-height: 10rem;
+  font-family: nixieone;
+  font-weight: 400;
+  margin:0;
+  text-align:center;
+}
+.home__primary{
+  @extend .text;
+}
+.home__line{
+  display: inline-block;
+  width:150px;
+  height:8px;
+  background-color: $c-second;
+  margin-top:50px;
+}
+.home__second{
+  @extend .text;
+  padding-top:40px;
+}
