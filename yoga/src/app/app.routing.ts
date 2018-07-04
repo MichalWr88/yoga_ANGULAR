@@ -13,4 +13,6 @@ const routesConfig: Routes = [
   { path: '**', component: PageNotFoundComponent }
 ];
 
-export const routerModule = RouterModule.forRoot(routesConfig);
+export const routerModule = RouterModule.forRoot(routesConfig, 
+  // { enableTracing: true}
+);
