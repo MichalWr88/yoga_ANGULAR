@@ -1,3 +1,58 @@
-.footer__page{
-  padding:10px;
+@import '~sass/variables';
+
+.footer__page {
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer__address {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: lato;
+  font-style: normal;
+  font-size: 2.6rem;
+  color: $c-font2;
+}
+
+.address__location {
+  margin: 0;
+  text-transform: capitalize;
+}
+.address__pipe {
+  margin: 0 10px;
+}
+.address__phone {
+  text-decoration: none;
+  color: $c-font2;
+}
+.footer__social {
+}
+.social__link {
+  margin: 0 10px;
+  width: 40px;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 2px;
+    bottom: -10px;
+    left: 0;
+    background-color: $c-font2;
+    transition: width 0.2s ease-in-out;
+  }
+  &:last-child{
+    margin:0;
+  }
+  &:hover:after {
+    // transform: scale(1.2);
+    width: 100%;
+  }
+}
+.footer__copyright {
+  flex: 1 1 100%;
 }
