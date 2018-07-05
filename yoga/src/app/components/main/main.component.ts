@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterModule, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -10,7 +10,7 @@ export class MainComponent implements OnInit {
   constructor(private router: Router) {
     router.events.subscribe(val => {
       // see also
-      if (val instanceof NavigationEnd && val.url.includes('contact')) {
+      if (val instanceof NavigationEnd && (val.url.includes('contact') || val.url.includes('blog') )) {
         this.showPic = false;
       } else {
         this.showPic = true;

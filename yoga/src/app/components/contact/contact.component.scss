@@ -1,4 +1,7 @@
 @import '~sass/_variables.scss';
+:host {
+  width: 100%;
+}
 .wrapper {
   box-sizing: border-box;
   width: 100%;
@@ -6,6 +9,67 @@
   display: flex;
   color: $c-primary;
   flex-direction: column;
+  // justify-content: center;
+  align-content: center;
+  align-items: center;
   padding: 10px 0 0 35px;
   font-family: nixieone;
+}
+.contact__header {
+  font-size: 3.5rem;
+  font-weight: 400;
+  align-self: flex-start;
+}
+.contact__form {
+  // max-width:450px;
+  // min-width:300px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+}
+.form__header {
+  font-size:2.3rem;
+  line-height: 3.0rem;
+  font-weight: 400;
+  margin:0;
+}
+.form__label{
+  font-family: lato;
+}
+
+.form__controls{
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 1.4rem;
+  background-color: $c-bginp;
+  border: 1px solid #b6d8cf;
+  color: $c-black;
+  padding: 0 5px;
+  outline: none;
+}
+.form__input {
+  @extend .form__controls;
+  height: 46px;
+  line-height: 4.6rem;
+}
+.form__textarea{
+  @extend .form__controls;
+  height: 250px;
+  line-height: 3.0rem;
+  resize: none;
+  overflow-y: auto;
+}
+.form__btn{
+  height:30px;
+  width:80px;
+  border-radius: 5px;
+  border:none;
+  padding:0 6px;
+  background-color:$c-primary;
+  color:$c-font2;
+  outline: none;
+  align-self: flex-end;
+  font-family: lato;
 }
