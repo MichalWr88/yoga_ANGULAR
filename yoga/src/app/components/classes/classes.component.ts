@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./classes.component.scss']
 })
 export class ClassesComponent implements OnInit {
+  viewDate: Date = new Date();
+  events = [];
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

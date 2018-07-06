@@ -1,6 +1,7 @@
 @import './variables';
 @import './normalize';
 @import "./mixins";
+@import "../../node_modules/angular-calendar/css/angular-calendar.css";
 
 @include font-face(lato, "../assets/fonts/lato-regular-webfont", normal,normal);
 @include font-face(nixieone, "../assets/fonts/nixieone-regular-webfont", normal,normal);
