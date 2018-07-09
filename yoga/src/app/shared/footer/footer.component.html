@@ -3,7 +3,7 @@
     <p class="address__location">123 st. city location, country </p>
     <span class="address__pipe"> | </span>
     <a href="tel:987654321" class="address__phone">987654321</a>
-    
+
   </address>
   <section class="footer__social">
     <a class="social__link" href="http://facebook.com">
@@ -19,5 +19,28 @@
       <img src="../../../assets/images/icon-pinterest.png" alt="social icon pinterest">
     </a>
   </section>
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+    <agm-marker [latitude]="lat" [longitude]="lng" ></agm-marker>
   <section class="footer__copyright">© 2023 by Belle & Carrie Rehabilitation Yoga. All rights reserved.</section>
+  </agm-map>
+  <div class="slider" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+    <div>
+      <h3>1</h3>
+    </div>
+    <div>
+      <h3>2</h3>
+    </div>
+    <div>
+      <h3>3</h3>
+    </div>
+    <div>
+      <h3>4</h3>
+    </div>
+    <div>
+      <h3>5</h3>
+    </div>
+    <div>
+      <h3>6</h3>
+    </div>
+  </div>
 </footer>

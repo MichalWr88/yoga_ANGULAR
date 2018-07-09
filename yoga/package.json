@@ -12,6 +12,7 @@
   },
   "private": true,
   "dependencies": {
+    "@agm/core": "^1.0.0-beta.3",
     "@angular/animations": "6.0.5",
     "@angular/common": "6.0.5",
     "@angular/compiler": "6.0.5",
@@ -23,7 +24,10 @@
     "@angular/router": "6.0.5",
     "angular-calendar": "^0.25.2",
     "core-js": "^2.4.1",
+    "jquery": "^3.3.1",
+    "ng2-owl-carousel2": "^2.0.3",
     "rxjs": "^6.2.1",
+    "slick-carousel": "^1.8.1",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

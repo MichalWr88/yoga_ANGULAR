@@ -30,7 +30,8 @@ import { ClassesModule } from './components/classes/classes.module';
     AboutModule,
     BlogModule,
     ContactModule,
-    ClassesModule
+    ClassesModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

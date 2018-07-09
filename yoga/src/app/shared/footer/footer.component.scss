@@ -1,5 +1,6 @@
 @import '~sass/variables';
-
+@import "~sass/slick";
+@import "~sass/slick-theme";
 .footer__page {
   padding: 20px 0;
   display: flex;
@@ -45,8 +46,8 @@
     background-color: $c-font2;
     transition: width 0.2s ease-in-out;
   }
-  &:last-child{
-    margin:0;
+  &:last-child {
+    margin: 0;
   }
   &:hover:after {
     // transform: scale(1.2);
@@ -55,4 +56,12 @@
 }
 .footer__copyright {
   flex: 1 1 100%;
+}
+agm-map {
+  margin-top:10px;
+  height: 300px;
+  width:80%;
+}
+.slider{
+  // width:80%;
 }
