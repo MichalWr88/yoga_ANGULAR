@@ -1,26 +1,28 @@
 <section class="wrapper">
   <h3 class="contact__header">Contact</h3>
-  <form class="contact__form">
+  <form class="contact__form" [formGroup]="contatcForm">
     <h4 class="form__header">Inquiries
     </h4>
     <label class="form__label">
       <p>Name</p>
-      <input class="form__input" type='text' name='name' placeholder="">
+      <input class="form__input" type='text'  formControlName='name' placeholder="">
     </label>
     <label class="form__label">
       <p>Email</p>
-      <input class="form__input" type='text' name='email' placeholder="">
+      <input class="form__input" type='text'  formControlName='email' placeholder="">
     </label>
     <label class="form__label">
       <p>Subject</p>
-      <input class="form__input" type='text' name='subject' placeholder="">
+      <input class="form__input" type='text'  formControlName='subject' placeholder="">
     </label>
     <label class="form__label">
       <p>Message</p>
-      <textarea class="form__textarea" name="message"></textarea>
+      <textarea class="form__textarea"  formControlName="message"></textarea>
     </label>
-    <button class="form__btn">Send</button>
+    <button class="snip0050"><span>Send</span>
+    <i class="ion-checkmark"></i></button>
   </form>
-
+<p>Form value: {{ contatcForm.value | json }}</p>
+<p>Form status: {{ contatcForm.status | json }}</p>
 
 </section>
