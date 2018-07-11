@@ -4,25 +4,31 @@
     <h4 class="form__header">Inquiries
     </h4>
     <label class="form__label">
-      <p>Name</p>
-      <input class="form__input" type='text'  formControlName='name' placeholder="">
+      <p>Name &#42;</p>
+      <input class="form__input" type='text' formControlName='name' placeholder="">
+      <error-message [control]="contatcForm.controls['name']"></error-message>
     </label>
     <label class="form__label">
-      <p>Email</p>
-      <input class="form__input" type='text'  formControlName='email' placeholder="">
+      <p>Email &#42;</p>
+      <input class="form__input" type='text' formControlName='email' name="email" placeholder="">
     </label>
+    <error-message [control]="contatcForm.controls['email']"></error-message>
     <label class="form__label">
-      <p>Subject</p>
-      <input class="form__input" type='text'  formControlName='subject' placeholder="">
+      <p>Subject &#42;</p>
+      <input class="form__input" type='text' formControlName='subject' placeholder="">
     </label>
+    <error-message [control]="contatcForm.controls['subject']"></error-message>
     <label class="form__label">
-      <p>Message</p>
-      <textarea class="form__textarea"  formControlName="message"></textarea>
+      <p>Message &#42;</p>
+      <textarea class="form__textarea" formControlName="message"></textarea>
     </label>
-    <button class="snip0050"><span>Send</span>
-    <i class="ion-checkmark"></i></button>
+    <error-message [control]="contatcForm.controls['message']"></error-message>
+    <button class="snip0050">
+      <span>Send</span>
+      <i class="ion-checkmark"></i>
+    </button>
   </form>
-<p>Form value: {{ contatcForm.value | json }}</p>
-<p>Form status: {{ contatcForm.status | json }}</p>
+  <p>Form value: {{ contatcForm.value | json }}</p>
+  <p>Form status: {{ contatcForm.status | json }}</p>
 
 </section>

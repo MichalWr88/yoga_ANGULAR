@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
-import { MAX_LENGTH_VALIDATOR } from '@angular/forms/src/directives/validators';
+import { MyValidators } from '../../shared/forms/myValidators';
 
 @Component({
   selector: 'app-contact',
@@ -15,10 +15,27 @@ export class ContactComponent implements OnInit {
   }
   _createForm() {
     return this.fb.group({
-      name: ['', Validators.required,Validators.mail],
-      email: ['', Validators.required],
-      subject: ['', Validators.required],
-      message: ['', Validators.required]
+      name: [
+        '',
+        Validators.compose([Validators.required, Validators.minLength(4), Validators.maxLength(100)])
+      ],
+      email: ['', Validators.compose([Validators.required, Validators.email])],
+      subject: [
+        '',
+        Validators.compose([
+          Validators.required,
+          Validators.minLength(4),
+          Validators.maxLength(100)
+        ])
+      ],
+      message: [
+        '',
+        Validators.compose([
+          Validators.required,
+          Validators.minLength(4),
+          Validators.maxLength(255)
+        ])
+      ]
     });
   }
 }
