@@ -13,11 +13,15 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
     this.contatcForm = this._createForm();
   }
-  _createForm() {
+  _createForm(): FormGroup {
     return this.fb.group({
       name: [
         '',
-        Validators.compose([Validators.required, Validators.minLength(4), Validators.maxLength(100)])
+        Validators.compose([
+          Validators.required,
+          Validators.minLength(4),
+          Validators.maxLength(100)
+        ])
       ],
       email: ['', Validators.compose([Validators.required, Validators.email])],
       subject: [

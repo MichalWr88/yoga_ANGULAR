@@ -1,3 +1,4 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClassesComponent } from './classes.component';
@@ -6,7 +7,11 @@ import { CalendarModule } from 'angular-calendar';
 
 
 @NgModule({
-  imports: [CommonModule, routerClassesModule, CalendarModule.forRoot()],
+  imports: [
+    BrowserModule, CommonModule,
+    routerClassesModule,
+    CalendarModule.forRoot()
+  ],
   declarations: [ClassesComponent],
   exports: [ClassesComponent]
 })

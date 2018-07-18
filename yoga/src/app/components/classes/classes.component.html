@@ -21,7 +21,24 @@
     <p>MWF : 1PM-2PM</p>
     <p>TTHS : 8AM to 9AM</p>
   </article>
-<mwl-calendar-month-view [viewDate]="viewDate" [events]="events">
-</mwl-calendar-month-view>
+  <div class="wrapper__btn">
+    <button class="btn" (click)="view = 'month'" >Month</button>
+    <button class="btn" (click)="view = 'week'">Week</button>
+    <button class="btn" (click)="view = 'day'">Day</button>
+  </div>
+  <div class="wrapper__btn">
+    <button class="btn" (click)="view = 'month'" >Previous</button>
+    <button class="btn" (click)="view = 'week'">Today</button>
+    <button class="btn" (click)="view = 'day'">Next</button>
+  </div>
+  
+<div [ngSwitch]="view">
+  <mwl-calendar-month-view class="callendar" *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="events">
+  </mwl-calendar-month-view>
+  <mwl-calendar-week-view *ngSwitchCase="'week'" [viewDate]="viewDate" [events]="events">
+  </mwl-calendar-week-view>
+  <mwl-calendar-day-view *ngSwitchCase="'day'" [viewDate]="viewDate" [events]="events">
+  </mwl-calendar-day-view>
+</div>
 
 </section>
