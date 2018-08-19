@@ -23,7 +23,9 @@
             "styles": [
               "src/sass/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/rrule/dist/es5/rrule.min.js"
+            ]
           },
           "configurations": {
             "production": {
